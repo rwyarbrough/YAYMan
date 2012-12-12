@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Current to YAMJ r2157 -->
+<Properties>
+    <Category name="General">
+        <Property key="mjb.homePage">
+            <Desc>Base name of HTML page pointed to by index.htm, and for the HOME button.</Desc>
+        </Property>
+        <Property key="mjb.indexFile">
+            <Desc>name of the index file generated: use index_sd.htm for SD skins; index.htm is good for HD skins</Desc>
+        </Property>
+        <Property key="mjb.clean.skip">
+            <Desc>Regex of files to skip during cleaning</Desc>
+        </Property>
+        <Property key="mjb.skin.copyDirs">
+            <Desc>List of directories to copy from the skin directory to the jukebox</Desc>
+        </Property>
+        <Property key="genres.max">
+            <Desc>The maximum number of genres to display per movie</Desc>
+        </Property>
+        <Property key="actors.max">
+            <Desc>The maximum number of actors to display per movie</Desc>
+        </Property>
+        <Property key="mjb.fullMovieInfoInIndexes" type="boolean">
+            <Desc>Include full movie details in the index xml files</Desc>
+        </Property>
+        <Property key="mjb.filter.genres" type="boolean">
+            <Desc>Reduce the number of genres</Desc>
+        </Property>
+        <Property key="sorting.strip.prefixes">
+            <Desc>Sorting prefixes to ignore</Desc>
+        </Property>
+        <Property key="certification.ordering">
+            <Desc>Ordering of certifications as displayed on the main index page. If Another rating exists for a movie that isn't listed here, it will simply be appended to the end.</Desc>
+        </Property>
+        </Category>
+    <Category name="Plot Summaries">
+        <Property key="imdb.plot" type="limited" options="short,long">
+            <Desc>Use the short plot or long plot description from IMDB</Desc>
+        </Property>
+        <Property key="filmweb.plot" type="limited" options="short,long">
+            <Desc>Use the short plot or long plot description from Filmweb</Desc>
+        </Property>
+        <Property key="mjb.includeEpisodePlots" type="boolean">
+            <Desc>Lookup and include the television episode Plot in the XML file</Desc>
+        </Property>
+    </Category>
+    <Category name="Fanart">
+        <Property key="fanart.movie.download" type="boolean">
+            <Desc>Settings for downloading movie fanart. If set to true this will save the fanart to the Jukebox folder.</Desc>
+        </Property>
+        <Property key="fanart.movie.width">
+            <Desc>Width etting for downloading movie fanart.</Desc>
+        </Property>
+        <Property key="fanart.movie.height">
+            <Desc>Height setting for downloading movie fanart.</Desc>
+        </Property>
+        <Property key="fanart.tv.download" type="boolean">
+            <Desc>Settings for downloading TV fanart. If set to true this will save the fanart to the Jukebox folder.</Desc>
+        </Property>
+        <Property key="fanart.tv.width">
+            <Desc>Width setting for downloading TV fanart.</Desc>
+        </Property>
+        <Property key="fanart.tv.height">
+            <Desc>Height setting for downloading TV fanart.</Desc>
+        </Property>
+        <Property key="fanart.scanner.fanartExtensions">
+            <Desc>This determines the extensions of the files that will be scanned for fanart.</Desc>
+        </Property>
+        <Property key="mjb.scanner.fanartToken">
+            <Desc>This is the extension to the video name to scan for fanart. This should be a value that shouldn't occur in any video filenames and should occur at the end of the video filename. If no fanart is found for a video, the normal download will be run.</Desc>
+        </Property>
+    </Category>
+    <Category name="Thumbnails">
+        <Property key="mjb.nbThumbnailsPerPage">
+            <Desc>Maximum number of thumbnails per index page</Desc>
+        </Property>
+        <Property key="mjb.nbThumbnailsPerLine">
+            <Desc>Maximum number of thumbnails per line in the index page</Desc>
+        </Property>
+        <Property key="mjb.nbTvThumbnailsPerPage">
+            <Desc>Maximum number of TV Show thumbnails per index page</Desc>
+        </Property>
+        <Property key="mjb.nbTvThumbnailsPerLine">
+            <Desc>Maximum number of TV Show thumbnails per line in the index page</Desc>
+        </Property>
+        <Property key="thumbnails.format" type="limited" options="jpeg,png">
+            <Desc>Thumbnails format</Desc>
+        </Property>
+        <Property key="thumbnails.width">
+            <Desc>Generated thumbnail width</Desc>
+        </Property>
+        <Property key="thumbnails.height">
+            <Desc>Generated thumbnail height</Desc>
+        </Property>
+        <Property key="thumbnails.logoHD" type="boolean">
+            <Desc>Add an HD logo to the thumbnail when the movie is 720p or 1080p</Desc>
+        </Property>
+        <Property key="thumbnails.logoTV" type="boolean">
+            <Desc>Add an TV logo to the thumbnail if the video is a tv show</Desc>
+        </Property>
+        <Property key="thumbnails.logoSet" type="boolean">
+            <Desc>Add a set logo to the thumbnail if the poster is a set master</Desc>
+        </Property>
+        <Property key="thumbnails.logoSubTitle" type="boolean">
+            <Desc>Add a subtitle logo to the thumbnail if the video has subtitles</Desc>
+        </Property>
+        <Property key="thumbnails.language" type="boolean">
+            <Desc>Add a language specific icon (flag) to the thumbnail</Desc>
+        </Property>
+        <Property key="thumbnails.normalize" type="boolean">
+            <Desc>Thumbnails resizing policy. When true, the generated thumbnails will be exactly WIDTHxHEIGHT (=> cropped images). When false, the original poster aspect ratio is respected.</Desc>
+        </Property>
+        <Property key="thumbnails.reflection" type="boolean">
+            <Desc>Add reflection to the generated thumbnails</Desc>
+        </Property>
+        <Property key="thumbnails.reflectionHeight">
+            <Desc>Percentage of the height of the poster to use as reflection effect.</Desc>
+        </Property>
+        <Property key="thumbnails.reflectionStart">
+            <Desc>Reflection gradient starts at this percentage of the reflection height</Desc>
+        </Property>
+        <Property key="thumbnails.reflectionEnd">
+            <Desc>Reflection gradient ends at this percentage of the reflection height</Desc>
+        </Property>
+        <Property key="thumbnails.opacityStart">
+            <Desc>Opacity start value</Desc>
+        </Property>
+        <Property key="thumbnails.opacityEnd">
+            <Desc>Opacity ending value</Desc>
+        </Property>
+        <Property key="thumbnails.perspective" type="boolean">
+            <Desc>Add a perspective effect to the generated thumbnails</Desc>
+        </Property>
+        <Property key="thumbnails.perspectiveTop">
+            <Desc>Percentage of the height of the thumbnail to use for perspective.</Desc>
+        </Property>
+        <Property key="thumbnails.perspectiveBottom">
+            <Desc>Percentage of the height of the thumbnail to use for perspective.</Desc>
+        </Property>
+        <Property key="thumbnails.perspectiveDirection" type="limited" options="left,right,both">
+            <Desc>The direction of the perspective.</Desc>
+        </Property>
+        <Property key="thumbnails.roundCorners" type="boolean">
+            <Desc>Turn on/off the rounded corners of the thumbnails</Desc>
+        </Property>
+        <Property key="thumbnails.cornerRadius">
+            <Desc>The radius (size) of the round corners.</Desc>
+        </Property>
+        <Property key="thumbnails.addFrame" type="boolean">
+            <Desc>Add a frame with a defined thickness (= frameSize) around the Image depending on resolution (SD, HD, 720p, 1080p) it can be filled with RGB color; default is White (255, 255, 255). Note: for 720p and 1080p differentiation, "highdef.differentiate=true" must be set.</Desc>
+        </Property>
+        <Property key="thumbnails.frame.size">
+            <Desc>The thickness in pixels of the frame around the image.</Desc>
+        </Property>
+        <Property key="thumbnails.frame.colorSD">
+            <Desc>The frame color (r/g/b) for SD video.</Desc>
+        </Property>
+        <Property key="thumbnails.frame.colorHD">
+            <Desc>The frame color (r/g/b) for HD video.</Desc>
+        </Property>
+        <Property key="thumbnails.frame.color720">
+            <Desc>The frame color (r/g/b) for 720p video.</Desc>
+        </Property>
+        <Property key="thumbnails.frame.color1080">
+            <Desc>The frame color (r/g/b) for 1080p video.</Desc>
+        </Property>
+        <Property key="thumbnails.overlay" type="boolean">
+            <Desc>Add new Overlay/Logo - possible Sources from XML</Desc>
+        </Property>
+        <Property key="thumbnails.overlay.source">
+            <Desc>The frame color (r/g/b) for 1080p video.</Desc>
+        </Property>
+        <Property key="thumbnails.overlay.offsetX">
+            <Desc>The frame color (r/g/b) for 1080p video.</Desc>
+        </Property>
+        <Property key="thumbnails.overlay.offsetY">
+            <Desc>The frame color (r/g/b) for 1080p video.</Desc>
+        </Property>
+    </Category>
+    <Category name="Posters">
+        <Property key="posters.format" type="limited" options="jpeg,png">
+            <Desc>Posters format</Desc>
+        </Property>
+        <Property key="posters.width">
+            <Desc>Generated poster width</Desc>
+        </Property>
+        <Property key="posters.height">
+            <Desc>Generated poster height</Desc>
+        </Property>
+        <Property key="posters.normalize" type="boolean">
+            <Desc>Posters resizing policy. When true, the generated posters will be exactly WIDTHxHEIGHT (=> cropped images). When false, the original poster aspect ratio is respected.</Desc>
+        </Property>
+        <Property key="posters.reflection" type="boolean">
+            <Desc>Add reflection to the generated posters</Desc>
+        </Property>
+        <Property key="posters.logoHD" type="boolean">
+            <Desc>Add an HD logo to the poster when the movie is 720p or 1080p</Desc>
+        </Property>
+        <Property key="posters.logoTV" type="boolean">
+            <Desc>Add an TV logo to the poster if the video is a tv show</Desc>
+        </Property>
+        <Property key="posters.logoSubTitle" type="boolean">
+            <Desc>Add a subtitle logo to the poster if the video has subtitles</Desc>
+        </Property>
+        <Property key="posters.language" type="boolean">
+            <Desc>Add a language specific icon (flag) to the poster</Desc>
+        </Property>
+        <Property key="posters.reflectionHeight">
+            <Desc>Percentage of the height of the poster to use as reflection effect.</Desc>
+        </Property>
+        <Property key="posters.reflectionStart">
+            <Desc>Reflection gradient starts at this percentage of the reflection height</Desc>
+        </Property>
+        <Property key="posters.reflectionEnd">
+            <Desc>Reflection gradient ends at this percentage of the reflection height</Desc>
+        </Property>
+        <Property key="posters.opacityStart">
+            <Desc>Opacity start value</Desc>
+        </Property>
+        <Property key="posters.opacityEnd">
+            <Desc>Opacity ending value</Desc>
+        </Property>
+        <Property key="posters.perspective" type="boolean">
+            <Desc>Add a perspective effect to the generated posters</Desc>
+        </Property>
+        <Property key="posters.perspectiveTop">
+            <Desc>Percentage of the height of the poster to use for perspective.</Desc>
+        </Property>
+        <Property key="posters.perspectiveBottom">
+            <Desc>Percentage of the height of the poster to use for perspective.</Desc>
+        </Property>
+        <Property key="posters.perspectiveDirection" type="limited" options="left,right,both">
+            <Desc>The direction of the perspective.</Desc>
+        </Property>
+        <Property key="posters.roundCorners" type="boolean">
+            <Desc>Turn on/off the rounded corners of the posters</Desc>
+        </Property>
+        <Property key="posters.cornerRadius">
+            <Desc>The radius (size) of the round corners.</Desc>
+        </Property>
+        <Property key="posters.addFrame" type="boolean">
+            <Desc>Add a frame with a defined thickness (= frameSize) around the Image depending on resolution (SD, HD, 720p, 1080p) it can be filled with RGB color; default is White (255, 255, 255). Note: for 720p and 1080p differentiation, "highdef.differentiate=true" must be set.</Desc>
+        </Property>
+        <Property key="posters.frame.size">
+            <Desc>The thickness in pixels of the frame around the image.</Desc>
+        </Property>
+        <Property key="posters.frame.colorSD">
+            <Desc>The frame color (r/g/b) for SD video.</Desc>
+        </Property>
+        <Property key="posters.frame.colorHD">
+            <Desc>The frame color (r/g/b) for HD video.</Desc>
+        </Property>
+        <Property key="posters.frame.color720">
+            <Desc>The frame color (r/g/b) for 720p video.</Desc>
+        </Property>
+        <Property key="posters.frame.color1080">
+            <Desc>The frame color (r/g/b) for 1080p video.</Desc>
+        </Property>
+        <Property key="posters.overlay" type="boolean">
+            <Desc>Add new Overlay/Logo - possible Sources from XML</Desc>
+        </Property>
+        <Property key="posters.overlay.source">
+            <Desc>The frame color (r/g/b) for 1080p video.</Desc>
+        </Property>
+        <Property key="posters.overlay.offsetX">
+            <Desc>The frame color (r/g/b) for 1080p video.</Desc>
+        </Property>
+        <Property key="posters.overlay.offsetY">
+            <Desc>The frame color (r/g/b) for 1080p video.</Desc>
+        </Property>
+    </Category>
+    <Category name="Season Wide Banners">
+        <Property key="mjb.includeWideBanners" type="boolean">
+            <Desc>Download Season Wide Banners. Currently only works with TV Episodes.</Desc>
+        </Property>
+        <Property key="mjb.onlySeriesBanners" type="boolean">
+            <Desc>Only download series banners and not specific season banners</Desc>
+        </Property>
+        <Property key="mjb.cycleSeriesBanners" type="boolean">
+            <Desc>Attempt to download different series banners for each season. Works if "mjb.seriesOnlyBanners=false" and there are no season banners and "mjb.seriesOnlyBanners=true".</Desc>
+        </Property>
+        <Property key="banners.format" type="limited" options="jpeg,png" wiki="false">
+            <Desc>Banners format</Desc>
+        </Property>
+        <Property key="banners.width" wiki="false">
+            <Desc>Generated banner width</Desc>
+        </Property>
+        <Property key="banners.height" wiki="false">
+            <Desc>Generated banner height</Desc>
+        </Property>
+        <Property key="banners.normalize" type="boolean" wiki="false">
+            <Desc>Banners resizing policy. When true, the generated banners will be exactly WIDTHxHEIGHT (=> cropped images). When false, the original banner aspect ratio is respected.</Desc>
+        </Property>
+        <Property key="banners.reflection" type="boolean" wiki="false">
+            <Desc>Add reflection to the generated banners</Desc>
+        </Property>
+        <Property key="banners.logoHD" type="boolean" wiki="false">
+            <Desc>Add an HD logo to the banner when the movie is 720p or 1080p</Desc>
+        </Property>
+        <Property key="banners.logoTV" type="boolean" wiki="false">
+            <Desc>Add an TV logo to the banner if the video is a tv show</Desc>
+        </Property>
+        <Property key="banners.language" type="boolean" wiki="false">
+            <Desc>Add a language specific icon (flag) to the banner</Desc>
+        </Property>
+        <Property key="banners.reflectionHeight" wiki="false">
+            <Desc>Percentage of the height of the banner to use as reflection effect.</Desc>
+        </Property>
+        <Property key="banners.reflectionStart" wiki="false">
+            <Desc>Reflection gradient starts at this percentage of the reflection height</Desc>
+        </Property>
+        <Property key="banners.reflectionEnd" wiki="false">
+            <Desc>Reflection gradient ends at this percentage of the reflection height</Desc>
+        </Property>
+        <Property key="banners.opacityStart" wiki="false">
+            <Desc>Opacity start value</Desc>
+        </Property>
+        <Property key="banners.opacityEnd" wiki="false">
+            <Desc>Opacity ending value</Desc>
+        </Property>
+        <Property key="banners.perspective" type="boolean" wiki="false">
+            <Desc>Add a perspective effect to the generated banners</Desc>
+        </Property>
+        <Property key="banners.perspectiveTop" wiki="false">
+            <Desc>Percentage of the height of the banners to use for perspective.</Desc>
+        </Property>
+        <Property key="banners.perspectiveBottom" wiki="false">
+            <Desc>Percentage of the height of the banners to use for perspective.</Desc>
+        </Property>
+        <Property key="banners.perspectiveDirection" type="limited" options="left,right,both" wiki="false">
+            <Desc>The direction of the perspective.</Desc>
+        </Property>
+        <Property key="banners.addText.title" type="boolean">
+            <Desc>Add text to banners</Desc>
+        </Property>
+        <Property key="banners.addText.season" type="boolean">
+            <Desc>Add season text to banners</Desc>
+        </Property>
+        <Property key="banners.addText.alignment" type="limited" options="left,right">
+            <Desc>Text alignment on banners</Desc>
+        </Property>
+        <Property key="banners.addText.font">
+            <Desc>Font for banner text</Desc>
+        </Property>
+        <Property key="banners.addText.fontSize">
+            <Desc>Font size for banner text</Desc>
+        </Property>
+        <Property key="banners.addText.fontColor">
+            <Desc>Font color for banner text</Desc>
+        </Property>
+        <Property key="banners.addText.fontShadow">
+            <Desc>Font shadow color for banner text</Desc>
+        </Property>
+        <Property key="banners.addText.offset">
+            <Desc>Text offset for banners</Desc>
+        </Property>
+        <Property key="banners.roundCorners" type="boolean">
+            <Desc>Turn on/off the rounded corners of the banners</Desc>
+        </Property>
+    </Category>
+    <Category name="VideoImages">
+        <Property key="mjb.includeVideoImages" type="boolean">
+            <Desc>Lookup and include the video image for each part of the video. Currently only works with TV Episodes.</Desc>
+        </Property>
+        <Property key="videoimages.format" type="limited" options="jpeg,png" wiki="false">
+            <Desc>VideoImages format</Desc>
+        </Property>
+        <Property key="videoimages.width" wiki="false">
+            <Desc>Generated VideoImage width</Desc>
+        </Property>
+        <Property key="videoimages.height" wiki="false">
+            <Desc>Generated VideoImage height</Desc>
+        </Property>
+        <Property key="videoimages.normalize" type="boolean" wiki="false">
+            <Desc>VideoImages resizing policy. When true, the generated VideoImages will be exactly WIDTHxHEIGHT (=> cropped images). When false, the original VideoImage aspect ratio is respected.</Desc>
+        </Property>
+        <Property key="videoimages.reflection" type="boolean" wiki="false">
+            <Desc>Add reflection to the generated VideoImages</Desc>
+        </Property>
+        <Property key="videoimages.logoHD" type="boolean" wiki="false">
+            <Desc>Add an HD logo to the VideoImage when the movie is 720p or 1080p</Desc>
+        </Property>
+        <Property key="videoimages.logoTV" type="boolean" wiki="false">
+            <Desc>Add an TV logo to the VideoImage if the video is a tv show</Desc>
+        </Property>
+        <Property key="videoimages.language" type="boolean" wiki="false">
+            <Desc>Add a language specific icon (flag) to the VideoImage</Desc>
+        </Property>
+        <Property key="videoimages.reflectionHeight" wiki="false">
+            <Desc>Percentage of the height of the VideoImage to use as reflection effect.</Desc>
+        </Property>
+        <Property key="videoimages.reflectionStart" wiki="false">
+            <Desc>Reflection gradient starts at this percentage of the reflection height</Desc>
+        </Property>
+        <Property key="videoimages.reflectionEnd" wiki="false">
+            <Desc>Reflection gradient ends at this percentage of the reflection height</Desc>
+        </Property>
+        <Property key="videoimages.opacityStart" wiki="false">
+            <Desc>Opacity start value</Desc>
+        </Property>
+        <Property key="videoimages.opacityEnd" wiki="false">
+            <Desc>Opacity ending value</Desc>
+        </Property>
+        <Property key="videoimages.perspective" type="boolean" wiki="false">
+            <Desc>Add a perspective effect to the generated VideoImages</Desc>
+        </Property>
+        <Property key="videoimages.perspectiveTop" wiki="false">
+            <Desc>Percentage of the height of the VideoImage to use for perspective.</Desc>
+        </Property>
+        <Property key="videoimages.perspectiveBottom" wiki="false">
+            <Desc>Percentage of the height of the VideoImage to use for perspective.</Desc>
+        </Property>
+        <Property key="videoimages.perspectiveDirection" type="limited" options="left,right,both" wiki="false">
+            <Desc>The direction of the perspective.</Desc>
+        </Property>
+        <Property key="videoimages.roundCorners" type="boolean">
+            <Desc>Turn on/off the rounded corners of the VideoImages.</Desc>
+        </Property>
+    </Category>
+    <Category name="Plugins">
+        <Property key="mjb.image.plugin">
+            <Desc>This is the fully qualified name of the plugin class implementing the thumbnail/poster/background generator for movie posters. If you don't know what all this is about, DO NOT CHANGE THESE VALUES.</Desc>
+        </Property>
+        <Property key="mjb.background.plugin">
+            <Desc>This is the fully qualified name of the plugin class implementing the thumbnail/poster/background generator for movie posters. If you don't know what all this is about, DO NOT CHANGE THESE VALUES.</Desc>
+        </Property>
+    </Category>
+    <Category name="High-Definition">
+        <Property key="highdef.differentiate" type="boolean">
+            <Desc>Differentiate between 720p and 1080p.  If this property is not set or false, then the highdef.720.width will be used to determine if a video is HD.</Desc>
+        </Property>
+        <Property key="highdef.720.width">
+            <Desc>The width of the video to define 720p. Note this will be used if highdef.differentiate=false to calculate a high-definition video.</Desc>
+        </Property>
+        <Property key="highdef.1080.width">
+            <Desc>The width of the video to define 1080p</Desc>
+        </Property>
+    </Category>
+    <Category name="Special Characters">
+        <Property key="indexing.character.replacement">
+            <Desc>Special accented character replacement for indexing purposes. This is a comma-separated list. The first character is the accent character followed by a hypen - and then the character to replace it with for indexing.</Desc>
+        </Property>
+        <Property key="indexing.character.groupEnglish" type="boolean">>
+            <Desc>Group all english chars in single AZ category</Desc>
+        </Property>
+    </Category>
+</Properties>
