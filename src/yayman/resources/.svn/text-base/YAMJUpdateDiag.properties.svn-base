@@ -1,0 +1,11 @@
+# To change this template, choose Tools | Templates
+# and open the template in the editor.
+
+lblStatus.text=Loading...
+lblRemoteRev.text=jLabel3
+jLabel2.text=Latest YAMJ:
+lblLocalRev.text=jLabel2
+jLabel1.text=Current YAMJ:
+btnCancel.text=Cancel
+btnUpdate.text=Update
+Form.title=YAMJ Update

@@ -1,0 +1,44 @@
+Form.title=Setup Wizard
+selectPropFile.Action.shortDescription=
+selectPropFile.Action.text=
+choosePropFile.Action.shortDescription=
+choosePropFile.Action.text=
+nextFromPropFile.Action.shortDescription=
+nextFromPropFile.Action.text=
+jLabel3.text=2. Library
+#NOI18N
+jLabel3.font=Tahoma-Bold-14
+jLabel4.text=Your library contains the paths to your video files.
+toggleLibFile.Action.shortDescription=
+toggleLibFile.Action.text=
+chooseLibraryFile.Action.shortDescription=
+chooseLibraryFile.Action.text=
+editLibFile.Action.shortDescription=
+editLibFile.Action.text=
+nextFromLibFile.Action.shortDescription=
+nextFromLibFile.Action.text=
+jukeboxRootChooseMenu.text=Choose
+#NOI18N
+jukeboxRootChooseMenu.icon=folder16.png
+chooseJukeboxRoot.Action.shortDescription=
+chooseJukeboxRoot.Action.text=
+chooseDetailsDir.Action.shortDescription=
+chooseDetailsDir.Action.text=
+finishWizard.Action.shortDescription=
+finishWizard.Action.text=
+jLabel12.text=1. Networked Media Tank
+#NOI18N
+jLabel12.font=Tahoma-Bold-14
+jLabel13.text=<html>If you select your NMT, it can simplify the setup process.</html>
+selectNMTAction.Action.shortDescription=
+selectNMTAction.Action.text=
+jButton1.text=Edit Library
+jLabel1.text=The local path is the path from this computer to the video.
+jLabel2.text=The player path is the path from your NMT to the video.
+jLabel5.text=3. Jukebox Output
+#NOI18N
+jLabel5.font=Tahoma 14-Bold-14
+jLabel6.text=When you generate the HTML and images that make your
+jLabel7.text=jukebox, where do you want them saved?
+txtJukeboxRoot.text=
+btnFinish.text=Done!

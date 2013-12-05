@@ -1,0 +1,15 @@
+title = About: ${Application.title} ${Application.version} 
+
+closeAboutBox.Action.text = &Close
+
+appDescLabel.text=<html>${Application.description}
+
+versionLabel.text=Version:
+
+vendorLabel.text=Author:
+
+homepageLabel.text=Homepage\:
+#NOI18N
+imageLabel.icon=film-folder-128.png
+#NOI18N
+appHomepageLabel.foreground=51, 51, 255

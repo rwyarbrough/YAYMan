@@ -1,0 +1,876 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Current through YAMJ r2100 -->
+<Properties>
+    <Category name="General">
+        <Property key="mjb.jukeboxRoot" type="folder">
+            <Desc>Name of the jukebox root folder in which the index.htm and details directory will be written.</Desc>
+        </Property>
+        <Property key="mjb.detailsDirName">
+            <Desc>name of the details directory of the jukebox</Desc>
+        </Property>
+        <Property key="mjb.jukeboxTempDir" type="folder">
+            <Desc>name of the root temporary directory to save files to</Desc>
+        </Property>
+        <Property key="mjb.forceXMLOverwrite" type="boolean">
+            <Desc>Force the jukebox's XML files to be overwritten</Desc>
+        </Property>
+        <Property key="mjb.forceThumbnailsOverwrite" type="boolean">
+            <Desc>Force the jukebox's posters thumbnails to be overwritten</Desc>
+        </Property>
+        <Property key="mjb.forceIndexOverwrite" type="boolean" wiki="false">
+            <Desc>Force the jukebox's index files (xml/html) to be overwritten; to be used after changing skins, etc. by default yamj tries to skip indexes if no change detected.</Desc>
+        </Property>
+        <Property key="mjb.forcePostersOverwrite" type="boolean">
+            <Desc>Force the jukebox's detail posters to be overwritten</Desc>
+        </Property>
+        <Property key="mjb.forceHTMLOverwrite" type="boolean">
+            <Desc>Force the jukebox's HTML files to be overwritten</Desc>
+        </Property>
+        <Property key="mjb.forceFanartOverwrite" type="boolean">
+            <Desc>Force the jukebox's Fanart files to be overwritten</Desc>
+        </Property>
+        <Property key="mjb.forceBannersOverwrite" type="boolean">
+            <Desc>Force the jukebox's Banner files to be overwritten</Desc>
+        </Property>
+        <Property key="mjb.forceVideoImagesOverwrite" type="boolean">
+            <Desc>Force the jukebox's Video Image files to be overwritten</Desc>
+        </Property>
+        <Property key="mjb.footerEnable" type="boolean">
+            <Desc>Enable to generate footer image</Desc>
+        </Property>
+        <Property key="mjb.forceFooterOverwrite" type="boolean">
+            <Desc>Force the jukebox's Footer files to be overwritten</Desc>
+        </Property>
+        <Property key="mjb.forceTrailersOverwrite" type="boolean">
+            <Desc>Force the jukebox's Trailers files to be overwritten</Desc>
+        </Property>
+        <Property key="mjb.forceSkinOverwrite" type="boolean">
+            <Desc>Force the skin files to be overwritten (Use when changing the skin)</Desc>
+        </Property>
+        <Property key="mjb.jukeboxClean" type="boolean">
+            <Desc>Clean the jukebox directory of unused files.</Desc>
+        </Property>
+        <Property key="mjb.monitorJukeboxProperties" type="boolean">
+            <Desc>Monitor the jukebox property files for changes and automatically apply the appropriate forceOverwite flags when changes are detected</Desc>
+        </Property>
+        <Property key="mjb.playerRootPath">
+            <Desc>For configurations please see http://code.google.com/p/moviejukebox/wiki/NMTRootPaths</Desc>
+        </Property>
+        <Property key="mjb.indexFilesPrefix" wiki="false">
+            <Desc>Use this prefix for all index files; a non emtpy value might break skins which reference fixed names</Desc>
+        </Property>
+        <Property key="mjb.extensions">
+            <Desc>Space separated list of extensions supported by moviejukebox.</Desc>
+        </Property>
+        <Property key="mjb.skin.dir" type="skin">
+            <Desc>Path to the skin to use when generating the Jukebox. The default skin is geared toward HD displays. An additional skin named "sd" is for Standard Definition displays.</Desc>
+        </Property>
+        <Property key="mjb.filter.genres" type="boolean">
+            <Desc>Enable or disable the genre filtering configured in the mjb.xmlGenreFile.</Desc>
+        </Property>
+        <Property key="mjb.xmlGenreFile" type="file">
+            <Desc>Genres file used for consolidating/renaming genres</Desc>
+        </Property>
+        <Property key="mjb.genre.skip">
+            <Desc>List of genres to skip when scraping video information. These genres will not be saved in the video xml files.</Desc>
+        </Property>
+        <Property key="mjb.xmlCategoryFile" type="file">
+            <Desc>Categories file used for enabling/renaming catgories</Desc>
+        </Property>
+        <Property key="mjb.filter.certification" type="boolean">
+            <Desc>Enable or disable the certification filtering configured in the mjb.xmlCertificationFile.</Desc>
+        </Property>
+        <Property key="mjb.xmlCertificationFile">
+            <Desc>Certification file used for enabling/renaming certification.</Desc>
+        </Property>
+        <Property key="mjb.filter.ratings" type="boolean">
+            <Desc>Enable or disable the rating filtering configured in the mjb.xmlRatingFile.</Desc>
+        </Property>
+        <Property key="mjb.xmlRatingFile" type="file">
+            <Desc>Ratings/Certification file used for enabling/renaming ratings and certification.</Desc>
+        </Property>
+        <Property key="mjb.newdays.movie">
+            <Desc>Number of Days a movie is considered for the NEW category. A 0 for newdays disables the new category.</Desc>
+        </Property>
+        <Property key="mjb.newcount.movie">
+            <Desc>Number of movies to include in the NEW category. A 0 for count will be treated as unlimited.</Desc>
+        </Property>
+        <Property key="mjb.newdays.tv">
+            <Desc>Number of Days a TV show is considered for the NEW category. A 0 for newdays disables the new category.</Desc>
+        </Property>
+        <Property key="mjb.newcount.tv">
+            <Desc>Number of TV shows to include in the NEW category. A 0 for count will be treated as unlimited.</Desc>
+        </Property>
+        <Property key="mjb.myiHome.IP" disabled="true">
+            <Desc>Specify the IP address and port number of the MyiHome server. This is inserted into the JSP playlist file. If you are not using MyiHome DO NOT ENABLE this setting.</Desc>
+        </Property>
+        <Property key="mjb.playlist.IgnoreExtensions">
+            <Desc>List of extensions to skip when generating a playlist</Desc>
+        </Property>
+        <Property key="mjb.playlist.generateMultiPart">
+            <Desc>Generate multipart playlists that allows the cycling of video parts. Note that this may break some skins that use this feature if it is disabled.</Desc>
+        </Property>
+        <Property key="mjb.forceNFOEncoding">
+            <Desc>Force encoding of XBMC XML in the NFO files if not specified in standard way within XML. Set the parameter to AUTO or remove it to turn off the forced encoding. Example: mjb.forceNFOEncoding=ISO-8859-1</Desc>
+        </Property>
+        <Property key="mjb.excludeMultiPartBluRay" type="boolean">
+            <Desc>Exclude multi part BluRay that include more than one file</Desc>
+        </Property>
+        <Property key="mjb.playFullBluRayDisk" type="boolean">
+            <Desc>To play full BluRay disks (for C-200) set this value to true, otherwise set it false to play the largest file on the disk</Desc>
+        </Property>
+        <Property key="mjb.scanner.fanartToken" wiki="false">
+            <Desc>This is the fanart scanner token. You should not really need to change this unless you need specific integration with third party applications.</Desc>
+        </Property>
+        <Property key="mjb.scanner.bannerToken" wiki="false">
+            <Desc>This is the banner scanner token. You should not really need to change this unless you need specific integration with third party applications.</Desc>
+        </Property>
+        <Property key="mjb.scanner.posterToken" wiki="false">
+            <Desc>This is the poster scanner token. You should not really need to change this unless you need specific integration with third party applications.</Desc>
+        </Property>
+        <Property key="mjb.scanner.thumbnailToken" wiki="false">
+            <Desc>This is the thumbnail scanner token. You should not really need to change this unless you need specific integration with third party applications.</Desc>
+        </Property>
+        <Property key="mjb.scanner.videoimageToken" wiki="false">
+            <Desc>This is the video image scanner token. You should not really need to change this unless you need specific integration with third party applications.</Desc>
+        </Property>
+        <Property key="mjb.scanner.footerToken" wiki="false">
+            <Desc>This is the footer scanner token. You should not really need to change this unless you need specific integration with third party applications.</Desc>
+        </Property>
+        <Property key="mjb.scanner.hashpathdepth" wiki="false">
+            <Desc>Use this value to add part of the path string(the number of upper folders) hash to the basename for generated files. Needed when having files with duplicated names in different folders.</Desc>
+        </Property>
+        <Property key="mjb.imageRetryCount">
+            <Desc>The number of times to retry to download an image before aborting.</Desc>
+        </Property>
+        <Property key="mjb.showMemory" type="boolean">
+            <Desc>Show memory usage during processing.</Desc>
+        </Property>
+        <Property key="mjb.Library.hideWatched" type="boolean">
+            <Desc>Hide the watched videos from the new category.</Desc>
+        </Property>
+        <Property key="mjb.jpeg.quality" type="boolean">
+            <Desc>JPEG Compression Quality. Values between 0 and 100 allowed - with 100 specifying minimum compression and maximum quality/filesize. Default is 75.</Desc>
+        </Property>
+        <Property key="complete.movies.enable" type="boolean">
+            <Desc>Enable the CompleteMovies.xml and RSS.xml output files</Desc>
+        </Property>
+        <Property key="mjb.sortTitle" type="limited" options="title,original,filename">
+            <Desc>Specifies the search engine to use to search for IMDb IDs. Valid values are: imdb, google, yahoo, none</Desc>
+        </Property>
+        <Property key="mjb.enableRottenTomatoes" type="boolean">
+            <Desc>Replace the ratings for movies with ones from RottenTomatoes</Desc>
+        </Property>
+        <Property key="mjb.rottentomatoes.priority">
+            <Desc>Comma separated list of the scores/ratings to use. The first one found will be used.</Desc>
+        </Property>
+        <Property key="mjb.rating.source">
+            <Desc>Where should the main rating be from? Average will provide the average of all available ratings, or specify a source list of sites. Example: mjb.rating.source=imdb,rottentomatoes,average. This will search imdb, then rottentomatoes for a rating, if they aren't found use the average of any other ratings.</Desc>
+        </Property>
+        <Property key="mjb.includeExtraArtwork" type="boolean">
+            <Desc>Scan the Fanart.tv website for new types of artwork</Desc>
+        </Property>
+        <Property key="mjb.scrapeAwards" type="boolean">
+            <Desc>Scrape information about the awards a movie has received</Desc>
+        </Property>
+        <Property key="mjb.scrapeBusiness" type="boolean">
+            <Desc>Scrape the business information for a movie</Desc>
+        </Property>
+        <Property key="mjb.scrapeTrivia" type="boolean">
+            <Desc>Scrape trivia information about the movie</Desc>
+        </Property>
+    </Category>
+    <Category name="Log file">
+        <Property key="mjb.appendDateToLogFile" type="boolean">
+            <Desc>Append the run date to the log file to create a unique log file for each run</Desc>
+        </Property>
+        <Property key="mjb.appendLibraryToLogFile" type="boolean">
+            <Desc>Append the library.xml file name to the log filename</Desc>
+        </Property>
+        <Property key="mjb.logTimeStamp" type="boolean">
+            <Desc>Insert the current date/time to the start of each log message</Desc>
+        </Property>
+        <Property key="mjb.logThreadName" type="boolean">
+            <Desc>Insert the thread name to the start of each log message. Useful for debugging log files if you need to.</Desc>
+        </Property>
+    </Category>
+    <Category name="Multi-thread processing">
+        <Property key="mjb.MaxThreadsProcess">
+            <Desc>Only change if you know what you are doing. This parameter defines the number of processing threads, it defaults to the number of CPU cores.</Desc>
+        </Property>
+        <Property key="mjb.MaxThreadsDownload">
+            <Desc>Only change if you know what you are doing. The global limit of web downloading slots. Downloading slots usually do not take CPU power, so a higher value here is usual. Per-host limits are also used (see MaxDownloadSlots). 0 means the same as MaxThreadsProcess (above).</Desc>
+        </Property>
+        <Property key="mjb.MaxDownloadSlots" wiki="false">
+            <Desc>Altering these settings could get you banned from the source websites. You can enter explicit limit per host; use regexp just like in source code.</Desc>
+        </Property>
+    </Category>
+    <Category name="Recheck properties">
+        <Property key="mjb.recheck.XML" type="boolean">
+            <Desc>Turn on/off the recheck function</Desc>
+        </Property>
+        <Property key="mjb.recheck.Max">
+            <Desc>The maximum number of XML files to rescan. Any more than this amount will be checked on the next run.</Desc>
+        </Property>
+        <Property key="mjb.recheck.Version" type="boolean">
+            <Desc>Check if the version of YAMJ has changed, e.g. v1.8 -> v1.9</Desc>
+        </Property>
+        <Property key="mjb.recheck.Revision">
+            <Desc>The number of YAMJ revisions before forcing a rescan</Desc>
+        </Property>
+        <Property key="mjb.recheck.minDays">
+            <Desc>The minimum age of the XML file before a recheck will be considered. Any file less than this age will not be considered for a recheck.</Desc>
+        </Property>
+        <Property key="mjb.recheck.Days">
+            <Desc>The number of days before forcing a rescan. 0 (Zero) disables this check.</Desc>
+        </Property>
+        <Property key="mjb.recheck.Unknown" type="boolean">
+            <Desc>Check to see if certain values of the XML file have UNKNOWN. Currently only Title, plot, year, video image and episode plots are checked.</Desc>
+        </Property>
+    </Category>
+    <Category name="Filename scanner">
+        <Property key="filename.scanner.language.detection" type="boolean">
+            <Desc>Turn ON/OFF the language detection in the filename</Desc>
+        </Property>
+        <Property key="filename.scanner.language.keywords" type="listssubs">
+            <Desc>This is the list of languages to detect. Each Language listed here must have a corresponding language flag in skin resource/languages folder.</Desc>
+            <SubDescBase>Case-sensitive language codes to search for </SubDescBase>
+        </Property>
+        <Property key="filename.scanner.useParentRegex" type="boolean">
+            <Desc>Set this property to enable the option to use a regex to trigger the use of the parent foldername rather than the filename</Desc>
+        </Property>
+        <Property key="filename.scanner.parentRegex">
+            <Desc>Use this regex expression to trigger the use of the parent folder name rather than the filename. If this regex is not "found" then normal filename processing is used. WARNING: Setting this value can harm your jukebox! Use with caution!</Desc>
+        </Property>
+        <Property key="filename.scanner.skip.keywords">
+            <Desc>Comma separated list of case-sensitive keywords to ignore in filenames</Desc>
+        </Property>
+        <Property key="filename.scanner.skip.caseSensitive" type="boolean">
+            <Desc>Treat filename.scanner.skip.keywords as case sensitive (true) or case insensitive (false). Warning: Changing this value may remove some proper words from your video titles.</Desc>
+        </Property>
+        <Property key="filename.scanner.skip.keywords.regex">
+            <Desc>Comma separated list of case-sensitive regexps to ignore in filenames. Warning: Properly escape all the regexps!</Desc>
+        </Property>
+        <Property key="filename.scanner.skip.caseSensitive.regex" type="boolean">
+            <Desc>Treat filename.scanner.skip.keywords.regex as case sensitive (true) or case insensitive (false).</Desc>
+        </Property>
+        <Property key="filename.scanner.skip.episodeTitle" type="boolean">
+            <Desc>Ignore (skip) any episode titles that are found in the filename for TV Shows.</Desc>
+        </Property>
+        <Property key="filename.scanner.subtitle">
+            <Desc>List of extensions for subtitle files</Desc>
+        </Property>
+        <Property key="filename.movie.versions.keywords">
+            <Desc>Comma separated list of case-insensitive key phrases to count as "movie versions." The key phrases are also "dividers-insensitive": space in the phrase is the place holder for any possible separator (such as dot, underline, minus, etc.)</Desc>
+        </Property>
+        <Property key="filename.extras.keywords">
+            <Desc>List of keywords to determine if the file is an extra (e.g. Trailer, Bonus content, etc). Filename will be like: "filename [TRAILER-trailer title].avi"</Desc>
+        </Property>
+        <Property key="filename.nfo.writeFiles">
+            <Desc>Generate a basic NFO file in the jukebox for each video. These NFO files are NOT used by YAMJ but can be copied alongside the videos if required.</Desc>
+        </Property>
+        <Property key="filename.scanner.source.default" type="limited" otherkey="filename.scanner.source.keywords" disabled="true">
+            <Desc>If there is no source found in the filename, use this value as the source</Desc>
+        </Property>
+        <Property key="filename.scanner.source.keywords" type="listssubs">
+            <Desc>Comma-separated list of case-insensitive keywords to map to </Desc>
+            <SubDescBase>Additional case-sensitive keywords to search for </SubDescBase>
+        </Property>
+        <Property key="filename.scanner.types" type="listssubs" wiki="false">
+            <Desc>These parameters control the pre-determined playLink attribute in the generated XML. Depending on the type of the file, these parameters will control the playLink output. This parameter lists the acceptable playlist types.</Desc>
+            <SubDescBase>These parameters list the file types associated with </SubDescBase>
+            <SubDescBase prefix="suffix">This is the playLink that is generated when the filetype matches </SubDescBase>
+        </Property>
+        <Property key="filename.extras.process" type="boolean">
+            <Desc>Process the extras as their own videos complete with artwork. Setting this value to false will just remove the "Extra" category, the extras will still be playable on the video page.</Desc>
+        </Property>
+    </Category>
+    <Category name="NFO Files">
+        <Property key="filename.nfo.directory">
+            <Desc>Library relative directory to check for nfo files if they aren't found as part of the normal scan. Leave blank or undefined to ignore this search. Example library path = "D:\Videos\" then this will search in "D:\Videos\NFO\"</Desc>
+        </Property>
+        <Property key="filename.nfo.extensions">
+            <Desc>List of extensions to consider as NFO files.</Desc>
+        </Property>
+        <Property key="filename.nfo.parentDirs" type="boolean">
+            <Desc>When enabled, all parent directories up to the library root are searched for NFO files. All found nfo files are merged. Values in nfo files in deeper directories override values from directories above.</Desc>
+        </Property>
+        <Property key="filename.nfo.checknewer" type="boolean">
+            <Desc>Check to see if the NFO file has changed and force a re-scan of the movie if it is.</Desc>
+        </Property>
+        <Property key="filename.nfo.acceptAllNfo" type="boolean">
+            <Desc>This property will select any/all NFO files in the directory as belonging to the video file. Note: This is best used where ALL videos have their own folders and WILL break individual episode NFO files for TV Series.</Desc>
+        </Property>
+        <Property key="filename.nfo.skipUrl" type="boolean">
+            <Desc>Setting this property means that the NFO scanner will skip (ignore) any image URL entries that are found in the XML NFO file.</Desc>
+        </Property>
+        <Property key="filename.nfo.skipTrailer" type="boolean">
+            <Desc>Setting this property means that the NFO scanner will skip (ignore) any trailer URL entries that are found in the XML NFO file.</Desc>
+        </Property>
+    </Category>
+    <Category name="Poster scanner">
+        <Property key="poster.scanner.searchForExistingCoverArt">
+            <Desc>Specifies if we should look for an existing covert art file. Valid values are : no, moviename, fixedcoverartname</Desc>
+        </Property>
+        <Property key="poster.scanner.coverArtExtensions">
+            <Desc>Specifies the valid extension for covert art files. Valid values is a coma separated list of extension</Desc>
+        </Property>
+        <Property key="poster.scanner.fixedCoverArtName" disabled="true">
+            <Desc>If poster.scanner.searchForExistingCoverart=fixedcoverartname, specifies the basename of the covert art file. Examples of value : folder, covert, poster...</Desc>
+        </Property>
+        <Property key="poster.scanner.coverArtDirectory" disabled="true">
+            <Desc>Specifies the subdirectory where to look for covertArt. Valid values is a directory name relative to the movie file. Disable this if the covertArt is stored in the same directory as movie.</Desc>
+        </Property>
+        <Property key="poster.scanner.useFolderImage" type="boolean">
+            <Desc>Specifies if the poster scanner should look for and use folder.* files if found. Warning: if you have a folder.* in your directory then this will use this for thumbnails for ALL videos in that folder. This is really intended for use with TV series.</Desc>
+        </Property>
+        <Property key="poster.scanner.imageName">
+            <Desc>This is the basename of the image to use from the folder. If useFolderImage=true then this additional file will be searched for.</Desc>
+        </Property>
+        <Property key="poster.scanner.SearchPriority.movie">
+            <Desc>Specifies a prioritised list of movie poster searches to look for a poster. Each search is tried in turn until a valid poster URL is found.</Desc>
+        </Property>
+        <Property key="poster.scanner.SearchPriority.tv">
+            <Desc>Specifies a prioritised list of tv poster searches to look for a poster. Each search is tried in turn until a valid poster URL is found.</Desc>
+        </Property>
+        <Property key="poster.scanner.Validate" type="boolean">
+            <Desc>Determines if the poster should be validated to ensure it's at least as big as the skin properties poster Width and Height, if not, the poster will be rejected. </Desc>
+        </Property>
+        <Property key="poster.scanner.ValidateMatch">
+            <Desc>How close to the poster Width and Height should a match be consider for use in YAMJ. Note this should be a whole percentage without the % sign. E.g. 75 will match any poster that is at least 75% of the poster Width / Height.</Desc>
+        </Property>
+        <Property key="poster.scanner.ValidateAspect" type="boolean">
+            <Desc>Determines if the poster validation should also include a check for the aspect ratio</Desc>
+        </Property>
+        <Property key="poster.scanner.google.retry">
+            <Desc>Tell the google poster plugin to test found urls, and if it's not valid, test this number of results.</Desc>
+        </Property>
+        <Property key="poster.scanner.google.Validate" type="boolean">
+            <Desc>Determines if the poster should be validated to ensure it's at least as big as the skin properties poster Width and Height, if not, the poster will be rejected.  If rejected, the .retry indicate the number of result to test.</Desc>
+        </Property>
+    </Category>
+    <Category name="Fanart scanner">
+        <Property key="fanart.scanner.useFolderImage" type="boolean">
+            <Desc>Specifies if the fanart scanner should look for and use fanart.* or background.* files if found. Warning: if you have either in your directory then this will use this for fanart for ALL videos in that folder. This is really intended for use with TV series or single movie per folder setups.</Desc>
+        </Property>
+        <Property key="fanart.scanner.imageName">
+            <Desc>This is the basename of the image to use from the folder. If useFolderImage=true then this additional file will be searched for.</Desc>
+        </Property>
+        <Property key="fanart.scanner.Validate" type="boolean">
+            <Desc>Determines if the fanart should be validated to ensure it's at least as big as the skin properties fanart Width and Height, if not, the fanart will be rejected.</Desc>
+        </Property>
+        <Property key="fanart.scanner.ValidateMatch">
+            <Desc>How close to the fanart Width and Height should a match be consider for use in YAMJ. Note this should be a whole percentage without the % sign, E.g. 75 will match any fanart that is at least 75% of the fanart Width / Height.</Desc>
+        </Property>
+        <Property key="fanart.scanner.ValidateAspect" type="boolean">
+            <Desc>Determines if the fanart validation should also include a check for the aspect ratio.</Desc>
+        </Property>
+    </Category>
+    <Category name="Banner scanner">
+        <Property key="banner.scanner.useFolderImage" type="boolean">
+            <Desc>Specifies if the banner scanner should look for and use folder banner files if found. Warning: if you have and of these in your directory then this will use this for banner artwork for ALL videos in that folder.</Desc>
+        </Property>
+        <Property key="banner.scanner.imageName">
+            <Desc>This is a list of the comma separated basenames to search for in the folder if banner.scanner.useFolderImage=true.</Desc>
+        </Property>
+    </Category>
+    <Category name="Watched scanner">
+        <Property key="watched.scanner.enable" type="boolean">
+            <Desc>Disable/enable the watched scanner.</Desc>
+        </Property>
+    </Category>
+    <Category name="Boxed sets">
+        <Property key="mjb.singleSeriesPage" type="boolean">
+            <Desc>Generate a single index page for each series. 'True' if found seasons should be considered as one movie in the main list and separate list for each TV show (with more than one season) should be generated. 'False' Each season is considered as separate movie and shown in main index.</Desc>
+        </Property>
+        <Property key="mjb.sets.minSetCount">
+            <Desc>Minimum number of movies in a category in the same set before they are replaced by the set master</Desc>
+        </Property>
+        <Property key="mjb.sets.requireAll" type="boolean">
+            <Desc>Only replace set movies for the set master if all movies appear in a category</Desc>
+        </Property>
+        <Property key="mjb.sets.specialsAtEnd" type="boolean">
+            <Desc>Sorts TV Show specials (Season 0) to the end of the list of seasons</Desc>
+        </Property>
+        <Property key="mjb.sets.rating">
+            <Desc>Rating is installed on a set</Desc>
+        </Property>
+        <Property key="mjb.categories.indexList">
+            <Desc>Comma-separated list of indexes to generate. Valid indexes include: Other, Genres, Title, Rating, Year, Library, Cast, Director, Writer and Country</Desc>
+        </Property>
+        <Property key="mjb.categories.displayList">
+            <Desc>Comma-separated list of indexes to display on the categories page. If blank or undefined, all categories listed in the indexList are shown.</Desc>
+        </Property>
+        <Property key="mjb.categories.minCount">
+            <Desc>Minimum number of movies in an index before it shows on the categories page</Desc>
+        </Property>
+        <Property key="mjb.sets.indexFanart" type="boolean">
+            <Desc>Create set index fanart for sets. If local set fanart is found it will be used otherwise the fanart from the first video will be used.</Desc>
+        </Property>
+        <Property key="mjb.sets.excludeTV" type="boolean">
+            <Desc>Exclude TV Series from the categories.xml file.</Desc>
+        </Property>
+    </Category>
+    <Category name="MediaInfo scanner" type="folder">
+        <Property key="mediainfo.home">
+            <Desc>Location</Desc>
+        </Property>
+        <Property key="mediainfo.metadata.enable" type="boolean">
+            <Desc>Have mediainfo pull meta data tags from media files. This data, if enabled, will override data in the NFO file. Valid values are: true, false.</Desc>
+        </Property>
+    </Category>
+    <Category name="OpenSubtitles">
+        <Property key="opensubtitles.language" disabled="true">
+            <Desc>The language used for downloading subtitle from opensubtitles.org. Valid languages are: alb,ara,arm,ass,bos,bul,cat,chi,hrv,cze,dan,dut,eng,est,per,fin,fre,glg,geo,ger,ell,heb,hin,hun,ice,ind,ita,jpn,kaz,kor,lav,lit,ltz,mac,may,nor,oci,pol,por,pob,rum,rus,scc,slo,slv,spa,swe,tha,tur,ukr,vie</Desc>
+        </Property>
+        <Property key="opensubtitles.username" disabled="true">
+            <Desc>Optional Username and Password for opensubtitles.org upload user ranking</Desc>
+        </Property>
+        <Property key="opensubtitles.password" disabled="true">
+            <Desc>Optional Username and Password for opensubtitles.org upload user ranking</Desc>
+        </Property>
+        <Property key="mjb.subtitles.ExcludeFilesWithoutExternal" type="boolean">
+            <Desc>Exclude files without subtitles</Desc>
+        </Property>
+    </Category>
+    <Category name="Trailers">
+        <Property key="trailers.scanner.enable" type="boolean">
+            <Desc>Enable or disable the trailers scanner plugin</Desc>
+        </Property>
+        <Property key="trailers.scanner">
+            <Desc>Specifies a prioritised list of trailer searches. Each search is tried in turn until a trailer is found.</Desc>
+        </Property>
+        <Property key="trailers.rescan.days">
+            <Desc>The number of days before forcing a rescan if a movie has no trailer. A value of -1 disable the rescan.</Desc>
+        </Property>
+        <Property key="trailers.path.scaner">
+            <Desc>The absolute path for the scanner trailers and player. If empty, the trailer is located near the film.</Desc>
+        </Property>
+        <Property key="trailers.path.player">
+            <Desc>The absolute path for the scanner trailers and player. If empty, the trailer is located near the film.</Desc>
+        </Property>
+        <Property key="trailers.download" type="boolean">
+            <Desc>Found it necessary to download the trailer</Desc>
+        </Property>
+        <Property key="trailers.safeFilename" type="boolean">
+            <Desc>Convert file name to a safe trailer</Desc>
+        </Property>
+    </Category>
+    <Category name="Apple trailers">
+        <Property key="appletrailers.resolution" disabled="true">
+            <Desc>The desired resolution of trailers from apple trailers site. Valid resolutions are: 1080p 720p 480p 640. Choose only one of these values, if a trailer is not found at that resolution then a lower quality one will be looked for. Leave this blank to disable this feature</Desc>
+        </Property>
+        <Property key="appletrailers.download" type="boolean">
+            <Desc>Flag for selecting download of the movie trailers (true), or streaming over the internet (false)</Desc>
+        </Property>
+        <Property key="appletrailers.max">
+            <Desc>Maximum number of trailers</Desc>
+        </Property>
+        <Property key="appletrailers.typesinclude" type="boolean">
+            <Desc>Use this parameter to determine if appletrailers.trailertypes lists trailer types to include (true) or exclude (false) from being downloaded or linked to</Desc>
+        </Property>
+        <Property key="appletrailers.trailertypes">
+            <Desc>This parameter should contain the trailer types you want to download. Examples are: tlr, tsr, clip</Desc>
+        </Property>
+        <Property key="appletrailers.replaceurl">
+            <Desc>Urls to be replaced: www.apple.com, movies.apple.com, images.apple.com</Desc>
+        </Property>
+    </Category>
+    <Category name="Web Proxy">
+        <Property key="mjb.ProxyHost" disabled="true">
+            <Desc>Should be filled in if you need to access the web through a proxy server. IP address or dns name of the proxy. Port must also be specified.</Desc>
+        </Property>
+        <Property key="mjb.ProxyPort" disabled="true">
+            <Desc>Should be filled in if you need to access the web through a proxy server. Port of the proxy. Host must also be specified.</Desc>
+        </Property>
+        <Property key="mjb.ProxyUsername" disabled="true">
+            <Desc>Optional, if you need to supply a username and password for the proxy server.</Desc>
+        </Property>
+        <Property key="mjb.ProxyPassword" disabled="true">
+            <Desc>Optional, if you need to supply a username and password for the proxy server.</Desc>
+        </Property>
+        <Property key="mjb.Timeout.Read">
+            <Desc>The time (in miliseconds) to attempt to read a web connection.</Desc>
+        </Property>
+        <Property key="mjb.Timeout.Connect">
+            <Desc>The time (in miliseconds) to attempt to connect to a web url.</Desc>
+        </Property>
+    </Category>
+    <Category name="Listing plugin">
+        <Property key="mjb.listing.generate" type="boolean">
+            <Desc>Set this parameter to true to generate the listing</Desc>
+        </Property>
+        <Property key="mjb.listing.plugin">
+            <Desc>The listing plugin to use</Desc>
+        </Property>
+        <Property key="mjb.listing.output.filename">
+            <Desc>override filename (.CSV is forced by CSV plugin)</Desc>
+        </Property>
+        <Property key="mjb.listing.output.destination" disabled="true" type="folder">
+            <Desc>destination defaults to mjb.jukeboxRoot unless specified here</Desc>
+        </Property>
+        <Property key="mjb.listing.types">
+            <Desc>types to include; options: Movie, Trailer, TV Show or TVShow, and All (default: All)</Desc>
+        </Property>
+        <Property key="mjb.listing.GroupByType" type="boolean">
+            <Desc>set to true to group by type (in order specified in mjb.listing.types) (default: true)</Desc>
+        </Property>
+        <Property key="mjb.listing.clear.UNKNOWN" type="boolean">
+            <Desc>set to true to blank common UNKNOWN values (default: true)</Desc>
+        </Property>
+        <Property key="mjb.listing.csv.fields">
+            <Desc>A comma separated list of field names. These names will determine the columns and the order that the fields will be written to the listing file. Leave this blank to generate all the fields that are available.</Desc>
+        </Property>
+        <Property key="mjb.listing.csv.delimiter">
+            <Desc>Set to the character to use as delimiter in the output file.</Desc>
+        </Property>
+        <Property key="mjb.listing.csv.dateFormat">
+            <Desc>Used to control the formatting of the date fields.</Desc>
+        </Property>
+        <Property key="mjb.listing.csv.ratingFactor">
+            <Desc>Used to control the value of the number in the field 'Rating #'.</Desc>
+        </Property>
+        <Property key="mjb.listing.csv.limitCast">
+            <Desc>Limit the cast field to a set number of values.</Desc>
+        </Property>
+        <Property key="mjb.listing.csv.limitGenres">
+            <Desc>Limit the genre field to a set number of values.</Desc>
+        </Property>
+    </Category>
+    <Category name="Output character encoding">
+        <Property key="mjb.charset.unsafeFilenameChars">
+            <Desc>Set this parameter to encode those characters in filenames</Desc>
+        </Property>
+        <Property key="mjb.charset.filenameEncodingEscapeChar">
+            <Desc>Set this parameter to control the escape character used for encoding</Desc>
+        </Property>
+        <Property key="mjb.charset.filename.translate">
+            <Desc>Replace national characters in filenames with transliterated Latin characters. Case insensitive, however the case is being saved.</Desc>
+        </Property>
+    </Category>
+    <Category name="Archive scanning">
+        <Property key="mjb.scanner.mediainfo.rar.extended.url" type="boolean">
+            <Desc>Pass RARs to mediainfo-rar instead of the old RAR Archive code. You most likely want to add exclude line to your library.xml.</Desc>
+        </Property>
+    </Category>
+    <Category name="Language plugins">
+        <Property key="plugin.plot.maxlength">
+            <Desc>This is the maximum length of the plot that each plugin will use. If the plot is longer than this value it will be truncated and the last three characters will be an ellipse (...)</Desc>
+        </Property>
+        <Property key="plugin.outline.maxlength">
+            <Desc>This is the maximum length of the outline that each plugin will use. If the outline is longer than this value it will be truncated and the last three characters will be an ellipse (...)</Desc>
+        </Property>
+        <Property key="mjb.internet.plugin">
+            <Desc>This is the fully qualified name of the plugin class implementing the internet search for movies (both movies data and poster). If you don't know what all this is about, DO NOT CHANGE THIS VALUE.</Desc>
+        </Property>
+        <Property key="mjb.internet.tv.plugin">
+            <Desc>This is the fully qualified name of the plugin to be used for TV series search (for both data and posters). If you don't know what all this is about, DO NOT CHANGE THIS VALUE.</Desc>
+        </Property>
+        <Property key="mjb.internet.plugin.autodetect">
+            <Desc>Turn on/off the auto detection of other plugins from the NFO file. If set to true then the NFO file will be scanned for alternative plugin URLs and, if found, that plugin will be used to scan for more information on the video. You can also list a predefined list of plugins to use.</Desc>
+        </Property>
+        <Property key="mjb.internet.person.plugin">
+            <Desc>This is the fully qualified name of the plugin to be used for personal information search.</Desc>
+        </Property>
+    </Category>
+    <Category name="IMDB">
+        <Property key="imdb.id.search" type="limited" options="imdb,google,yahoo,none">
+            <Desc>Specifies the search engine to use to search for IMDb IDs. Valid values are: imdb, google, yahoo, none</Desc>
+        </Property>
+        <Property key="imdb.perfect.match" type="boolean">
+            <Desc>Try to find movies in IMDb "perfect match" section. When set to true, IMDb plugin will search for "movie title (year)" in the "perfect match section". If found, then this entry is used. If not found, the first movie found is returned.</Desc>
+        </Property>
+        <Property key="imdb.site" type="limited" options="us,fr,es,de,it,pt,labs">
+            <Desc>Specifies the IMDb site to use. Valid values are : us, fr, es, de, it, pt, labs</Desc>
+        </Property>
+        <Property key="imdb.full.info" type="boolean">
+            <Desc>Get all available information from the "combined" imdb page rather than the more limited "standard" page</Desc>
+        </Property>
+    </Category>
+    <Category name="TheMovieDB">
+        <Property key="themoviedb.language" type="limited" options="cs,da,de,el,en,es,fi,fr,he,hi,hu,it,ja,nl,no,pl,pt,ru,sl,sv,tr,zh">
+            <Desc>The language used for searching TheMovieDB and the language to have descriptions and text translated to.</Desc>
+        </Property>
+        <Property key="themoviedb.country">
+            <Desc>The 2 charachter ISO 3166-1 code for the language you want to use. See http://en.wikipedia.org/wiki/ISO_3166-1. Used to search for posters and release dates..</Desc>
+        </Property>
+    </Category>
+    <Category name="TheTVDB">
+        <Property key="thetvdb.language" type="limited" options="cs,da,de,el,en,es,fi,fr,he,hu,it,ja,nl,no,pl,pt,ru,sl,sv,tr,zh">
+            <Desc>The language used for searching TheTVDB and the language to have descriptions and text translated to. Valid languages are: da,fi,nl,de,it,es,fr,pl,hu,el,tr,ru,he,ja,pt,zh,cs,sl,en,sv,no</Desc>
+        </Property>
+        <Property key="thetvdb.dvd.episodes" type="boolean">
+            <Desc>Specify whether to use the DVD sort or the aired date sort. Valid values are: true, false.  true will sort by dvd episode number, false will use aired episode number</Desc>
+        </Property>
+    </Category>
+    <Category name="FilmAffinity">
+        <Property key="filmaffinity.id.search" type="limited" options="filmaffinity,google">
+            <Desc>Specifies the search engine to be search for FilmAffinity IDs</Desc>
+        </Property>
+    </Category>
+    <Category name="Filmweb">
+        <Property key="filmweb.id.search" type="limited" options="filmweb,google,yahoo,none">
+            <Desc>Specifies the search engine to be search for Filmweb IDs. Valid values are: filmweb, google, yahoo, none</Desc>
+        </Property>
+    </Category>
+    <Category name="Kinopoisk">
+        <Property key="kinopoisk.rating" type="limited" options="imdb,kinpoisk,average">
+            <Desc>Specifies preferred movie rating method. Valid values are: imdb, kinopoisk, average</Desc>
+        </Property>
+        <Property key="kinopoisk.trailer.setExchange" type="boolean">
+            <Desc>Specifies if "trailer exchange" property should be set when no trailer is found.</Desc>
+        </Property>
+        <Property key="kinopoisk.trailer.download" type="boolean">
+            <Desc>Specifies if found trailer should be downloaded.</Desc>
+        </Property>
+        <Property key="kinopoisk.title.leader" type="limited" options="english,russian">
+            <Desc>What name leader on title.</Desc>
+        </Property>
+        <Property key="kinopoisk.title.divider">
+            <Desc>Divider between english and russian names on title.</Desc>
+        </Property>
+        <Property key="kinopoisk.NFOpriority" type="boolean">
+            <Desc>Set priority of data from NFO file.</Desc>
+        </Property>
+        <Property key="kinopoisk.fanart" type="boolean">
+            <Desc>Download fanart from kinopoisk.ru.</Desc>
+        </Property>
+        <Property key="kinopoisk.poster" type="boolean">
+            <Desc>Download poster from kinopoisk.ru.</Desc>
+        </Property>
+        <Property key="kinopoisk.kard" type="boolean">
+            <Desc>Download videoimage instead fanart from kinopoisk.ru</Desc>
+        </Property>
+        <Property key="kinopoisk.company" type="limited" options="first,all">
+            <Desc>Scrape information about company: first or all</Desc>
+        </Property>
+        <Property key="kinopoisk.country" type="limited" options="first,all">
+            <Desc>Scrape information about country: first or all</Desc>
+        </Property>
+        <Property key="kinopoisk.clear.award" type="boolean">
+            <Desc>Clear awards before scrape information from kinopoisk.ru</Desc>
+        </Property>
+        <Property key="kinopoisk.etalon">
+            <Desc>Set etalon movie ID to test site structure (default: Avatar)</Desc>
+        </Property>
+    </Category>
+    <Category name="MovieMeter">
+        <Property key="moviemeter.id.search" type="limited" options="moviemeter,google,none">
+            <Desc>Specifies the search engine to be search for MovieMeter IDs. Valid values are: moviemeter, google, none</Desc>
+        </Property>
+    </Category>
+    <Category name="FilmDeltaSE">
+        <Property key="filmdelta.rating" type="limited" options="imdb,filmdelta,average">
+            <Desc>Specifies preferred movie rating method. Valid values are: imdb, filmdelta, average</Desc>
+        </Property>
+        <Property key="filmdelta.getcdonposter" type="boolean">
+            <Desc>Specifies whether to download movie posters from cdon.se. Valid values are: true, false</Desc>
+        </Property>
+    </Category>
+    <Category name="FilmKatalogus">
+        <Property key="filmkatalogus.getplot" type="boolean">
+            <Desc>Whether to get the plot from FilmKatalogus.</Desc>
+        </Property>
+        <Property key="filmkatalogus.gettitle" type="boolean">
+            <Desc>Whether to get the title from FilmKatalogus</Desc>
+        </Property>
+    </Category>
+    <Category name="Sratim">
+        <Property key="sratim.subtitle" type="boolean">
+            <Desc>Specify whether to download movie subtitles</Desc>
+        </Property>
+        <Property key="sratim.downloadOnlyHebrew" type="boolean">
+            <Desc>Specify whether to download only hebrew subtitles, and ignore non-hebrew versions</Desc>
+        </Property>
+        <Property key="sratim.username">
+            <Desc>Username for login to sratim web site - without login you are limited to 3 subtitles download per day</Desc>
+        </Property>
+        <Property key="sratim.password">
+            <Desc>Password for login to sratim web site</Desc>
+        </Property>
+        <Property key="sratim.code">
+            <Desc>Validation code, leave empty for first run. After first run, a file named 'sratim.jpg' will be created with the validation code image to enter here</Desc>
+        </Property>
+        <Property key="sratim.BidiSupport" type="boolean">
+            <Desc>Toggle visual hebrew html output for devices running a firmware with BiDi text support</Desc>
+        </Property>
+        <Property key="sratim.KeepEnglishTitles" type="boolean">
+            <Desc>Display and sort the movie title in English as it retrieved from IMDB</Desc>
+        </Property>
+        <Property key="sratim.KeepEnglishGenres" type="boolean">
+            <Desc>Display and sort the movie genres in English as it retrieved from IMDB</Desc>
+        </Property>
+        <Property key="sratim.keepImdbCast" type="boolean">
+            <Desc>Display the cast as it retrieved from IMDB 'true' value will overwrite with the hebrew cast from sratim.co.il</Desc>
+        </Property>
+        <Property key="sratim.textMatchSimilarity">
+            <Desc>Value to match movie name to subtitles (in percent),  above this value, the plugin will take this subtitles instead of taking the best match based on FPS and source</Desc>
+        </Property>
+    </Category>
+    <Category name="ComingSoon">
+        <Property key="comingsoon.search">
+            <Desc>Specifies the search engine to search for ComingSoon IDs. Valid values are: filmweb, google, yahoo or a comma-separated list of these values.</Desc>
+        </Property>
+        <Property key="comingsoon.imdb.scan" type="limited" options="always,fallback,never">
+            <Desc>Controls when IMDB should be scanned. If fallback is configured, IMDB will be scanned only if movie is not found on comingsoon.it.</Desc>
+        </Property>
+        <Property key="comingsoon.imdb.perferredFor">
+            <Desc>Specifies which informations will be fetched from IMDB (if present) rather than from comingsoon.it. Comma separated list of the following values: title,originalTitle,plot,outline,rating,runtime,country,year,company,genres,cast,directors,writers.</Desc>
+        </Property>
+        <Property key="comingsoontrailers.maxResolution" disabled="true" type="limited" options="1080p,720p,480p">
+            <Desc>The desired resolution of trailers from comingsoon site. If a trailer is not found at that resolution then a lower quality one will be looked for. Leave at default to disable.</Desc>
+        </Property>
+        <Property key="comingsoontrailers.preferredFormat" type="limited" options="wmv,mov mov,wmv" delimiter=" ">
+            <Desc>HD trailers are usually available in MOV format from comingsoon.it. WMV is found sometimes. This property specifies the prefered format order.</Desc>
+        </Property>
+        <Property key="comingsoon.trailer.setExchange" type="boolean">
+            <Desc>Specifies if "trailer exchange" property should be set when no trailer is found. If this poperty is set to false, the appletrailer plugin will be used if configured. If set to true, only comingsoon trailers will be scanned.</Desc>
+        </Property>
+        <Property key="comingsoon.trailer.download" type="boolean">
+            <Desc>Specifies if found trailer should be downloaded</Desc>
+        </Property>
+        <Property key="comingsoontrailers.label">
+            <Desc>For downloaded trailers, this property will set a label that will be added in the filename. E.g. MOVIE_FILENAME.[TRAILER-ita].avi</Desc>
+        </Property>
+    </Category>
+    <Category name="Trailersland">
+        <Property key="trailersland.max">
+            <Desc>Trailers to be downloaded or linked</Desc>
+        </Property>
+        <Property key="trailersland.maxResolution" type="limited" options="1080p,720p,sd">
+            <Desc>The desired resolution of trailers from trailersland site. If a trailer is not found at that resolution then a lower quality one will be looked for. Leave at default to disable.</Desc>
+        </Property>
+        <Property key="trailersland.allowedFormats">
+            <Desc>Valid file extension, separated by commas</Desc>
+        </Property>
+        <Property key="trailersland.preferredLanguages">
+            <Desc>Ordered list of desired languages. Valid items are ita, sub-ita, en, fr.</Desc>
+        </Property>
+        <Property key="trailersland.preferredTypes">
+            <Desc>Ordered list of desired trailer type. Valid items are trailer and teaser.</Desc>
+        </Property>
+    </Category>
+    <Category name="AniDB">
+        <Property key="anidb.useHashIdentification" type="boolean">
+            <Desc>Tells the anidb plugin to use filehashes rather than filenames to identify files</Desc>
+        </Property>
+        <Property key="anidb.minimumCategoryWeight">
+            <Desc>The minimum category weight for a category to be added to the genre list for the file</Desc>
+        </Property>
+        <Property key="anidb.maxGenres">
+            <Desc>The maximum number of genres an anime can have</Desc>
+        </Property>
+        <Property key="anidb.regex.tvshow">
+            <Desc>Custom regex to use when identifying TV shows, must contain two groups, one matching the title and one the episode number</Desc>
+        </Property>
+        <Property key="anidb.regex.tvshow.index" type="limited" options="1,2 2,1" delimiter=" ">
+            <Desc>Group indexes as seen by the java Matcher class for the title and episode number. Should be specified as TitleIndex,EpisodeIndex</Desc>
+        </Property>
+        <Property key="anidb.regex.movie">
+            <Desc>Custom regex to use when identifying movies. Should contain a group matching the title</Desc>
+        </Property>
+        <Property key="anidb.regex.movie.index">
+            <Desc>Index of the group matching the title</Desc>
+        </Property>
+    </Category>
+    <Category name="Advanced Parameters">
+        <Property key="mjb.skipIndexGeneration" type="boolean">
+            <Desc>Skip creation of the indexes and HTML pages. This parameter is intended for use by third-party applications such as NMTServer, that do their own indexing and web page creation. </Desc>
+        </Property>
+        <Property key="mjb.skipHtmlGeneration" type="boolean">
+            <Desc>Skip creation of the HTML pages. This parameter is intended for use by flash skins that don't require the HTML pages to be generated. However, leaving this enabled will NOT affect the flash skin, and could be useful if you want to run a flash jukebox and a HTML jukebox.</Desc>
+        </Property>
+        <Property key="mjb.fullMovieInfoInIndexes" type="boolean">
+            <Desc>Use full or partial information in the index files. </Desc>
+        </Property>
+        <Property key="mjb.fullCategoriesInIndexes" type="boolean">
+            <Desc>This property will limit the information written in the index XML files to only the categories and index names that are current, i.e. the category and index that is being processed. </Desc>
+        </Property>
+    </Category>
+    <Category name="Persons">
+        <Property key="mjb.people" type="boolean">
+            <Desc>This parameter sets the collection of enhancement data about people (cast/directors/writers).</Desc>
+        </Property>
+        <Property key="mjb.people.folder">
+            <Desc>Folder name in the Jukebox to store personal information.</Desc>
+        </Property>
+        <Property key="mjb.people.popularity">
+            <Desc>Minimum popularity (count movies where person exists) to scan personal information.</Desc>
+        </Property>
+        <Property key="mjb.people.maxCount">
+            <Desc>Count of person from per movie to scan personal details.</Desc>
+        </Property>
+        <Property key="mjb.includePhoto" type="boolean">
+            <Desc>Personal photo included.</Desc>
+        </Property>
+        <Property key="photo.scanner.photoExtensions">
+            <Desc>Personal photo image extensions.</Desc>
+        </Property>
+        <Property key="mjb.forcePhotoOverwrite" type="boolean">
+            <Desc>Enabled personal photo image overwrite.</Desc>
+        </Property>
+        <Property key="plugin.biography.maxlength">
+            <Desc>Max length of biography.</Desc>
+        </Property>
+        <Property key="plugin.filmography.max">
+            <Desc>Count of movie per person.</Desc>
+        </Property>
+        <Property key="plugin.people.maxCount">
+            <Desc>Count of people per movie.</Desc>
+        </Property>
+        <Property key="plugin.people.maxCount.director">
+            <Desc>Count of director per movie.</Desc>
+        </Property>
+        <Property key="plugin.people.maxCount.writer">
+            <Desc>Count of writer per movie.</Desc>
+        </Property>
+        <Property key="plugin.people.maxCount.actor">
+            <Desc>Count of actor per movie.</Desc>
+        </Property>
+        <Property key="plugin.people.skip.VG" type="boolean">
+            <Desc>Skip VideoGame on filmography scanner.</Desc>
+        </Property>
+        <Property key="plugin.people.skip.TV" type="boolean">
+            <Desc>Skip TeleVision on filmography scanner.</Desc>
+        </Property>
+        <Property key="plugin.people.skip.V" type="boolean">
+            <Desc>Skip Video on filmography scanner.</Desc>
+        </Property>
+        <Property key="plugin.filmography.jobsInclude">
+            <Desc>List of jobs included in the filmography.</Desc>
+        </Property>
+        <Property key="indexing.completePerson" type="boolean">
+            <Desc>Index only people with complete personal information.</Desc>
+        </Property>
+    </Category>
+    <Category name="Multiview">
+        <Property key="mjb.view.detailList">
+            <Desc>Comma-separated list of xsl files.</Desc>
+        </Property>
+        <Property key="mjb.view.indexList">
+            <Desc>Comma-separated list of xsl files.</Desc>
+        </Property>
+        <Property key="mjb.view.personList">
+            <Desc>Comma-separated list of xsl files.</Desc>
+        </Property>
+    </Category>
+    <Category name="Trivia">
+        <Property key="plugin.trivia.maxCount">
+            <Desc>Max count of trivia.</Desc>
+        </Property>
+    </Category>
+    <Category name="Explosion Set">
+        <Property key="mjb.categories.explodeSet">
+            <Desc>Comma-separated list of indexes where SETS will be replace by their containing movie.</Desc>
+        </Property>
+        <Property key="mjb.categories.explodeSet.removeSet" type="boolean">
+            <Desc>Remove SET from category after explode it.</Desc>
+        </Property>
+        <Property key="mjb.categories.explodeSet.keepTV" type="boolean">
+            <Desc>Protect the TV show from the explosion serial set.</Desc>
+        </Property>
+        <Property key="mjb.categories.explodeSet.beforeSort" type="boolean">
+            <Desc>Explode SET before sorting.</Desc>
+        </Property>
+    </Category>
+</Properties>
